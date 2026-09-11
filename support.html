@@ -149,7 +149,19 @@
                 padding: 24px;
             }
         }
-    </style>
+    
+        /* Large displays: scale the root font size so this page grows with the
+           rest of the site. The prose column stays near its original width, so
+           legal copy never runs the full width of a 2560px monitor. */
+        @media (min-width: 1500px) {
+            :root { font-size: 17.5px; }
+            .container { max-width: 880px; }
+        }
+        @media (min-width: 2000px) {
+            :root { font-size: 19px; }
+            .container { max-width: 940px; }
+        }
+</style>
 </head>
 <body>
     <div class="header">

@@ -149,7 +149,24 @@
             color: #10b981;
             text-decoration: none;
         }
-    </style>
+    
+        /* Large displays: the shell was pinned at 800px, which on a 2560px
+           monitor reads as a narrow column adrift in empty space. Widen the
+           shell AND scale the root font size, so type, spacing and the app icon
+           all grow together — widening alone just stretches the gaps. The
+           feature grid is auto-fit, so it fills the extra width itself. */
+        @media (min-width: 1500px) {
+            :root { font-size: 17.5px; }
+            .container { max-width: 1280px; }
+            .hero { padding: 80px 20px; }
+            .app-icon { width: 140px; height: 140px; font-size: 70px; }
+        }
+        @media (min-width: 2000px) {
+            :root { font-size: 19px; }
+            .container { max-width: 1500px; }
+            .app-icon { width: 156px; height: 156px; font-size: 78px; }
+        }
+</style>
 </head>
 <body>
     <div class="container">
